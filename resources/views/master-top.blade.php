@@ -33,11 +33,10 @@
                     </ul>
 
                     <img src="/logo_indorama.png">
-
-                    <ul class="app-header-buttons pull-right">
-                        <li><a href="#" class="btn btn-link btn-icon"><span class="icon-cog"></span></a></li>
-                        <li><a href="#" class="btn btn-default">Log Out</a></li>
-                    </ul>
+                    <div class="app-header-buttons pull-right">
+                        Welcome,<strong> {{ auth()->user()->name }}</strong>
+                        <a href="logout" class="btn btn-danger">Log Out</a>
+                    </div>
                 </div>
             </div>
             <!-- END APP HEADER  -->

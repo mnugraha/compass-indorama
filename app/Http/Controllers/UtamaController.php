@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Kompetensi;
 use App\Models\Nilai;
+use App\Models\Level;
+use App\Models\User;
+use App\Models\Peran;
+use App\Models\Profile;
 
 class UtamaController extends Controller
 {
@@ -20,6 +26,48 @@ class UtamaController extends Controller
     {
         return view('dashboard');
     }
+    public function profil()
+    {
+        $dataNilai = Nilai::all();
+        $dataLevel = Level::all();
+        $dataPeran = Peran::all();
+        $dataProfile = Profile::join('nilai', 'profile.nilai', '=', 'nilai.id_nilai')
+            ->orderBy('nilai', 'asc')
+            ->get(['nilai.*', 'profile.*']);
+        $dataUser = User::join('peran', 'peran.id_peran', '=', 'users.function')
+            ->join('level', 'level.id_level', '=', 'users.level')
+            ->where('users.id_user', '=', Auth::user()->id_user)
+            ->get(['users.*', 'level.*', 'peran.*'])->first();
+        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile]);
+    }
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function login_proses(Request $a)
+    {
+        $cek = $a->validate([
+            'id_user' => 'required',
+            'password' => 'required'
+        ]);
+
+        if (Auth::attempt($cek)) {
+            $a->session()->regenerate();
+            return redirect()->intended('/profil');
+        }
+        //return view('index');
+        return back()->with('loginError', 'Maaf! Gagal Login');
+    }
+
+    public function logout(Request $a)
+    {
+        Auth::logout();
+        $a->session()->invalidate();
+        $a->session()->regenerateToken();
+        return redirect('/login');
+    }
+
     public function A()
     {
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'A1')

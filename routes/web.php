@@ -22,6 +22,10 @@ Route::get('/master', [UtamaController::class, 'index']);
 
 Route::get('/contoh', [UtamaController::class, 'contoh']);
 Route::get('/dashboard', [UtamaController::class, 'dashboard']);
+Route::get('/profile', [UtamaController::class, 'profil']);
+Route::get('/login', [UtamaController::class, 'login']);
+Route::get('/logout', [UtamaController::class, 'logout']);
+Route::post('/login_proses', [UtamaController::class, 'login_proses']);
 Route::get('/A', [UtamaController::class, 'A']);
 Route::get('/B', [UtamaController::class, 'B']);
 Route::get('/C', [UtamaController::class, 'C']);
