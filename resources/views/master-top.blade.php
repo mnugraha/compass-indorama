@@ -36,7 +36,7 @@
                     <div class="app-header-buttons pull-right">
                         @if (isset(auth()->user()->name))
                             Welcome,<strong> {{ auth()->user()->name }}</strong>
-                            <a href="/logout" class="btn btn-danger">Log Out</a>
+                            <a href="/logout" class="btn btn-sm btn-danger">Log Out</a>
                         @else
                             <a href="/login" class="btn btn-info">Login</a>
                         @endif

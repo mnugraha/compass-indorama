@@ -1,10 +1,10 @@
 @extends('master-top')
 @section('title')
-    Dashboard
+    Home
 @endsection
 
 @section('judul')
-    Dashboard
+    Home
 @endsection
 
 @section('konten-tanpa-frame')
