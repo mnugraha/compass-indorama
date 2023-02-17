@@ -35,10 +35,10 @@
                     <img src="/logo_indorama.png">
                     <div class="app-header-buttons pull-right">
                         @if (isset(auth()->user()->name))
-                            Welcome,<strong> {{ auth()->user()->name }}</strong>
+                            Welcome,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a>
                             <a href="/logout" class="btn btn-sm btn-danger">Log Out</a>
                         @else
-                            <a href="/login" class="btn btn-info">Login</a>
+                            <a href="/login" class="btn btn-sm btn-info">Login</a>
                         @endif
 
                     </div>
@@ -55,6 +55,11 @@
                                 <li>
                                     <a href="/"><span class="icon-earth"></span> Home</a>
                                 </li>
+                                @if (isset(auth()->user()->name))
+                                    <li>
+                                        <a href="/profile"><span class="icon-user"></span> My Profile</a>
+                                    </li>
+                                @endif
                                 {{-- <li>
                                     <a href="#"><span class="icon-sync"></span> Materi</a>
                                 </li>

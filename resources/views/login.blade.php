@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Boooya - Login With Background</title>
+    <title>Login - HR Indorama</title>
 
     <!-- META SECTION -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="app-login-box-footer">
-                    &copy; TRPL-PEI. All rights reserved.
+                    &copy;HR Indorama. All rights reserved.
                 </div>
             </div>
 
