@@ -54,7 +54,7 @@ class UtamaController extends Controller
 
         if (Auth::attempt($cek)) {
             $a->session()->regenerate();
-            return redirect()->intended('/profil');
+            return redirect()->intended('/profile');
         }
         //return view('index');
         return back()->with('loginError', 'Maaf! Gagal Login');

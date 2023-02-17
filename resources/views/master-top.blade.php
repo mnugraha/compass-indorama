@@ -34,8 +34,13 @@
 
                     <img src="/logo_indorama.png">
                     <div class="app-header-buttons pull-right">
-                        Welcome,<strong> {{ auth()->user()->name }}</strong>
-                        <a href="logout" class="btn btn-danger">Log Out</a>
+                        @if (isset(auth()->user()->name))
+                            Welcome,<strong> {{ auth()->user()->name }}</strong>
+                            <a href="/logout" class="btn btn-danger">Log Out</a>
+                        @else
+                            <a href="/login" class="btn btn-info">Login</a>
+                        @endif
+
                     </div>
                 </div>
             </div>
@@ -48,9 +53,9 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="#"><span class="icon-earth"></span> Home</a>
+                                    <a href="/"><span class="icon-earth"></span> Home</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="#"><span class="icon-sync"></span> Materi</a>
                                 </li>
                                 <li>
@@ -59,7 +64,7 @@
                                         <li><a href="pages-bank-settings.html">Account</a></li>
                                         <li><a href="pages-bank-security.html">Security</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                             </ul>
                         </nav>
                     </div>

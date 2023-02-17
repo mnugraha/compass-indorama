@@ -14,12 +14,12 @@ use App\Http\Controllers\UtamaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/master', [UtamaController::class, 'index']);
-
+Route::get('/', [UtamaController::class, 'dashboard']);
 Route::get('/contoh', [UtamaController::class, 'contoh']);
 Route::get('/dashboard', [UtamaController::class, 'dashboard']);
 Route::get('/profile', [UtamaController::class, 'profil']);
