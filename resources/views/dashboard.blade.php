@@ -4,7 +4,7 @@
 @endsection
 
 @section('judul')
-    Home
+    Indorama Kompas
 @endsection
 
 @section('konten-tanpa-frame')
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-area-chart"></span> Kemampuan</h3>
         </div>
@@ -95,9 +95,10 @@
         </div>
     </div>
 
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-heartbeat"></span> Nilai-nilai</h3>
+            <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-heartbeat"></span> Nilai-nilai (Value)
+            </h3>
         </div>
         <div class="panel-body">
             <div class="row">
