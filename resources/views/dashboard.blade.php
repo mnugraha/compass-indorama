@@ -10,26 +10,36 @@
 @section('konten-tanpa-frame')
     <div class="panel panel-biru">
         <div class="panel-heading">
-            <h3 class="panel-title"><span class="icon-bullhorn"></span> Tujuan</h3>
+            <div class="row">
+                <div class="col-md-2">
+                    <h3 class="panel-title" style="font-size: 18px"><span class="fa fa-suitcase"></span> Tujuan</h3>
+                </div>
+                <div class="col-md-9">
+                    <h2><strong><span style="color: #c7170e">(</span> Material Esensial. Hidup yang Lebih
+                            Baik <span style="color: #c7170e">)</span></strong></h2>
+                </div>
+            </div>
         </div>
-        <div class="panel-body">
-            <h3><strong>(Material Esensial. Hidup yang Lebih Baik)</strong></h3>
-        </div>
-    </div>
 
-    <div class="panel panel-merah">
-        <div class="panel-heading">
-            <h3 class="panel-title"><span class="icon-bullhorn"></span> Visi</h3>
-        </div>
-        <div class="panel-body">
-            <h3><strong>Perusahaan material pilihan pelanggan dan karyawan</strong></h3>
-            <p style="font-size: 18px; color:gray">Mendorong kemajuan, pertumbuhan, dan keberlanjutan</p>
+        <div class="panel-heading" style="background-color: #c7170e">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3 class="panel-title" style="font-size: 18px;">
+                        <span class="fa fa-group"></span> Visi
+                    </h3>
+                </div>
+                <div class="col-md-9">
+                    <h3><strong>Perusahaan material pilihan pelanggan dan karyawan</strong></h3>
+                    <p style="font-size: 16px; color:lightgoldenrodyellow">Mendorong kemajuan, pertumbuhan, dan
+                        keberlanjutan</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><span class="icon-bullhorn"></span> Kemampuan</h3>
+            <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-area-chart"></span> Kemampuan</h3>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -87,7 +97,7 @@
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><span class="icon-bullhorn"></span> Nilai-nilai</h3>
+            <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-heartbeat"></span> Nilai-nilai</h3>
         </div>
         <div class="panel-body">
             <div class="row">
